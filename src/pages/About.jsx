@@ -52,7 +52,7 @@ function About() {
                             <ShieldCheck size={32} className="feature-icon" />
                         </div>
                         <h3>Safety & Hygiene</h3>
-                        <p>Ensuring that all shared food meets the highest standards of safety and freshness.</p>
+                        <p>Ensuring that all shared food meets the highest standards of safety and freshness. </p>
                     </div>
                 </div>
             </section>
