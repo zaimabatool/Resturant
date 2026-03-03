@@ -1,0 +1,243 @@
+.admin-dashboard {
+    padding: 6rem 2rem;
+}
+
+.dashboard-header {
+    margin-bottom: 4rem;
+}
+
+.dashboard-visual-header {
+    display: flex;
+    flex-direction: column-reverse;
+    /* image on top on mobile */
+    gap: 3rem;
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    margin-top: 2rem;
+    margin-bottom: 8rem;
+    overflow: hidden;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .dashboard-visual-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.header-text-content {
+    flex: 1;
+}
+
+.header-chart-container {
+    flex: 1;
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.chart-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.chart-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.chart-bar-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.chart-label-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+}
+
+.chart-bar-bg {
+    width: 100%;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.chart-bar-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width 1s ease-out;
+}
+
+.chart-bar-fill.primary {
+    background: var(--color-primary-light);
+}
+
+.chart-bar-fill.secondary {
+    background: var(--color-secondary);
+}
+
+.dashboard-header.text-center {
+    text-align: center;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.stat-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-content h3 {
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.stat-content p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* History Data Table */
+.history-section {
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 4rem;
+}
+
+.history-header {
+    padding: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.history-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.inline-icon {
+    color: var(--color-primary-light);
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.history-table th {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.25rem 2rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.history-table td {
+    padding: 1.25rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    vertical-align: middle;
+}
+
+.history-table tr:last-child td {
+    border-bottom: none;
+}
+
+.food-details-cell {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.table-thumbnail {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.table-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.history-table tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.text-primary {
+    color: var(--color-primary-light);
+}
+
+.text-secondary {
+    color: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+    .dashboard-visual-header {
+        padding: 1.5rem;
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .header-chart-container {
+        padding: 1.5rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        padding: 1.5rem;
+    }
+
+    .history-header {
+        padding: 1.5rem;
+    }
+
+    .history-table th,
+    .history-table td {
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+}
